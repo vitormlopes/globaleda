@@ -1,0 +1,4 @@
+Bundle-Name: GlobalEdas-edit-portlet
+Bundle-SymbolicName: GlobalEdas.edit.portlet
+Bundle-Version: 1.0.0
+Export-Package: GlobalEdas.edit.portlet.constants
