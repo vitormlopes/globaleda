@@ -1,0 +1,4 @@
+Bundle-Name: noticias-view-portlet
+Bundle-SymbolicName: noticias.view.portlet
+Bundle-Version: 1.0.0
+Export-Package: noticias.view.portlet.constants

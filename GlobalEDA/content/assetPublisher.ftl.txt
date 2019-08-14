@@ -1,0 +1,58 @@
+<div class="row-fluid col-md-12 " style="height:50vh;">
+    <#if entries?has_content>
+        <div class="col-md-12">
+            <div class="col-md-1">
+            </div>
+            <div class="col-md-10" style="padding:0px;">
+                <#assign counter = 1>
+                <#list entries as entry>
+
+                    <#if counter == 1>
+                        <#assign padding = "padding-right: 20px; padding-left:0px;">
+                    </#if>
+                    <#if counter == 2>
+                        <#assign padding = "padding-right: 20px; padding-left:20px;">
+                    </#if>
+                    <#if counter == 3>
+                        <#assign padding = "padding-left:20px; padding-right:0px;">
+                    </#if>
+                    <#assign renderer = entry.getAssetRenderer()>
+                    <#assign className = renderer.getClassName()>
+
+                    <#if className == "com.liferay.journal.model.JournalArticle" >
+                        <#assign journalArticle = renderer.getArticle()>
+                        <#assign document = saxReaderUtil.read(journalArticle.getContent())>
+                        <#assign rootElement = document.getRootElement()>
+
+                        <#assign xPathSelector = saxReaderUtil.createXPath("dynamic-element[@name='Imageg7m2']")>
+                        <#assign image = xPathSelector.selectSingleNode(rootElement).getStringValue()>
+
+                        <#assign xPathSelector = saxReaderUtil.createXPath("dynamic-element[@name='Text6z3n']")>
+                        <#assign title = xPathSelector.selectSingleNode(rootElement).getStringValue()>
+
+                        <#assign xPathSelector = saxReaderUtil.createXPath("dynamic-element[@name='TextBox4q6q']")>
+                        <#assign desc = xPathSelector.selectSingleNode(rootElement).getStringValue()>
+                        
+						<div class="col-md-4" style="${padding}">
+                            <a href="/detalhe-noticia?articleId=${entry.getEntryId()}">
+                                <img style="padding:0px; padding-bottom: 15px; height:205px;" class="col-md-12" src=${image}/>
+
+                           
+                                    <p class="nhomepage_data">${title}</p>
+                          
+                                <p class="nhomepage_titulo" style="">${desc}</p>
+                            </a>
+                        </div>
+                    </#if>
+                    <#assign counter = counter + 1>
+                    <#if counter == 4>
+                        <#assign counter = 1>
+                    </#if>
+                </#list>
+
+            </div>
+            <div class="col-md-1">
+            </div>
+        </div>
+    </#if>
+</div>

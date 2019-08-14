@@ -1,0 +1,1 @@
+create index IX_1EADDB06 on EDA_Noticia (uuid_[$COLUMN_LENGTH:75$]);

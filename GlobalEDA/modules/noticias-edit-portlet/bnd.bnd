@@ -1,0 +1,4 @@
+Bundle-Name: noticias-edit-portlet
+Bundle-SymbolicName: noticias.edit.portlet
+Bundle-Version: 1.0.0
+Export-Package: noticias.edit.portlet.constants

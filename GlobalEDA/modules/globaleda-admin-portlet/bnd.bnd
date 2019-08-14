@@ -1,4 +1,0 @@
-Bundle-Name: globaleda-admin-portlet
-Bundle-SymbolicName: globaleda.admin.portlet
-Bundle-Version: 1.0.0
-Export-Package: globaleda.admin.portlet.constants

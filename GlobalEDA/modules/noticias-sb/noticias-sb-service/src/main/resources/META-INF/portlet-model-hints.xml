@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="noticias.sb.model.Noticia">
+		<field name="uuid" type="String" />
+		<field name="noticiaId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="createDate" type="Date" />
+		<field name="modifiedDate" type="Date" />
+		<field name="titulo" type="String" />
+		<field name="descricao" type="String" />
+		<field name="documentId" type="long" />
+		<field name="fileUrl" type="String" />
+	</model>
+</model-hints>

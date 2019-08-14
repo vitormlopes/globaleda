@@ -1,0 +1,10 @@
+Bundle-Name: noticias-sb-api
+Bundle-SymbolicName: noticias.sb.api
+Bundle-Version: 1.0.0
+Export-Package:\
+	noticias.sb.exception,\
+	noticias.sb.model,\
+	noticias.sb.service,\
+	noticias.sb.service.persistence
+-check: EXPORTS
+-includeresource: META-INF/service.xml=../noticias-sb-service/service.xml
